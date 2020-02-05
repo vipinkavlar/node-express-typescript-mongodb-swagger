@@ -14,6 +14,10 @@ function swaggerIgnite(applicationInstance:Application) {
       },
       host: APP_PATH+':'+PORT, // the host or url of the app
       basePath: '/', // the basepath of your endpoint
+	  schemes: [
+        "https",
+        "http"
+      ],
     };
 
     // options for the swagger docs
@@ -28,7 +32,6 @@ function swaggerIgnite(applicationInstance:Application) {
 
     // use swagger-Ui-express for your app documentation endpoint
     applicationInstance.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-    // this.app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 }
 
 export default swaggerIgnite;
