@@ -4,7 +4,7 @@ import * as swaggerJSDoc from 'swagger-jsdoc';
 import {Application}  from 'express';
 
 function swaggerIgnite(applicationInstance:Application) {
-	const { PORT, APP_PATH } = process.env;
+	  const { PORT, APP_PATH } = process.env;
     // Swagger definition
     const swaggerDefinition = {
       info: {
@@ -14,7 +14,7 @@ function swaggerIgnite(applicationInstance:Application) {
       },
       host: APP_PATH+':'+PORT, // the host or url of the app
       basePath: '/', // the basepath of your endpoint
-	  schemes: [
+	    schemes: [
         "https",
         "http"
       ],
