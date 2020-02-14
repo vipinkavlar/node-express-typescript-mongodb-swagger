@@ -38,3 +38,5 @@ validationJsonResponse will output the response in JSON format as given below:
 	}
 }
 ```
+
+validationMiddleware sends HTTP response. Usage of both middlewares can be seen in the routes/user.route.ts file
