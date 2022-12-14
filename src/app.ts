@@ -66,18 +66,12 @@ class App {
 
   private connectToDatabase() {
     const { MONGO_USER, MONGO_PASSWORD, MONGO_PATH, MONGO_CONNECTION_VERB } = process.env;
-    const options = {
-        useCreateIndex: true,
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false,
-      };
-    
-      if (this.env) {
+    if (this.env) {
         // production database
-      } else {
-        mongoose.connect(MONGO_CONNECTION_VERB+'://'+MONGO_USER+':'+MONGO_PASSWORD+MONGO_PATH, { ...options });
-      }
+    } else {
+        mongoose.set('strictQuery', false);
+        mongoose.connect(MONGO_CONNECTION_VERB+'://'+MONGO_USER+':'+MONGO_PASSWORD+MONGO_PATH);
+    }
   }
 }
 

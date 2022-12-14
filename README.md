@@ -8,6 +8,11 @@ Please follw the below steps:
 git clone https://github.com/vipinkavlar/node-express-typescript-mongodb-swagger.git
 cd node-express-typescript-mongodb-swagger
 npm install
+npm update  //if required
+npm outdated //if required
+npm install ts-node@<suggestedVersionhere>
+npm install typescript@<suggestedVersionhere>
+npm install --save @types/node
 npm run dev
 ```
 
