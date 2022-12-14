@@ -1,6 +1,11 @@
 # node-express-typescript-mongodb-swagger
 
+Environment
+```
+NPM: 8.19.2
+Node : 18.12.1 LTS
 
+```
 
 Please follw the below steps:
 
@@ -9,10 +14,10 @@ git clone https://github.com/vipinkavlar/node-express-typescript-mongodb-swagger
 cd node-express-typescript-mongodb-swagger
 npm install
 npm update  //if required
-npm outdated //if required
+npm outdated //if required. Then update the required packages as given below;
 npm install ts-node@<suggestedVersionhere>
 npm install typescript@<suggestedVersionhere>
-npm install --save @types/node
+npm install --save @types/node@18.11.15
 npm run dev
 ```
 
